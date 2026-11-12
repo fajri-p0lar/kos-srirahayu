@@ -242,7 +242,7 @@ export default function RoomManagementPage({
           </div>
           <div className="room-stat-details">
             <span className="room-stat-val">{availableCount}</span>
-            <span className="room-stat-lbl">Kamar Tersedia (Siap Huni)</span>
+            <span className="room-stat-lbl">Kamar Tersedia</span>
           </div>
         </div>
 
@@ -252,7 +252,7 @@ export default function RoomManagementPage({
           </div>
           <div className="room-stat-details">
             <span className="room-stat-val">{maintenanceCount}</span>
-            <span className="room-stat-lbl">Sedang Perawatan Fisik</span>
+            <span className="room-stat-lbl">Dalam Perawatan</span>
           </div>
         </div>
 
@@ -262,7 +262,7 @@ export default function RoomManagementPage({
           </div>
           <div className="room-stat-details">
             <span className="room-stat-val">{totalTypes}</span>
-            <span className="room-stat-lbl">Kategori Tipe Kamar</span>
+            <span className="room-stat-lbl">Tipe Kamar</span>
           </div>
         </div>
       </div>

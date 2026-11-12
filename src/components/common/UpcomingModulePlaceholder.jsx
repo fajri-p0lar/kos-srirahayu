@@ -37,9 +37,9 @@ export default function UpcomingModulePlaceholder({ moduleId, onBackToDashboard 
       ]
     },
     expenses: {
-      title: "Modul 5 — Operational Expenses & Reports",
+      title: "Pengeluaran & Laporan",
       desc: "Pencatatan pengeluaran operasional kos, filter periode bulanan/tahunan, dan rekapitulasi laba bersih.",
-      phase: "Konstruksi RAD Tahap Berikutnya (Estimasi 4–5 hari)",
+      phase: "Segera Hadir",
       sotItems: [
         "Pencatatan pengeluaran (WiFi, listrik induk, sampah, perawatan AC, renovasi)",
         "Kategori pengeluaran operasional Kos Srirahayu",
@@ -48,9 +48,9 @@ export default function UpcomingModulePlaceholder({ moduleId, onBackToDashboard 
       ]
     },
     users: {
-      title: "Modul 6 — User Management & Authentication",
+      title: "Manajemen Pengguna",
       desc: "Autentikasi akun dan pembatasan hak akses berjenjang untuk Owner, Admin/Pengelola, dan Tenant.",
-      phase: "Konstruksi RAD Tahap Berikutnya (Estimasi 3–4 hari)",
+      phase: "Segera Hadir",
       sotItems: [
         "Hak akses Owner: Monitoring ringkasan, laporan keuangan, dan audit sistem",
         "Hak akses Admin: Operasional kamar, penghuni, tagihan, dan pengeluaran",
@@ -99,7 +99,7 @@ export default function UpcomingModulePlaceholder({ moduleId, onBackToDashboard 
 
         <div className="sot-box text-left mt-6 bg-slate-50 p-4 rounded-xl border border-slate-200">
           <span className="text-xs font-bold text-slate-700 uppercase tracking-wider">
-            Rencana Kerja SOT:
+            Yang akan tersedia:
           </span>
           <ul className="mt-2 space-y-2 text-xs text-slate-600">
             {item.sotItems.map((s, idx) => (

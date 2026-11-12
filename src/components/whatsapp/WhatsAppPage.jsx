@@ -191,9 +191,8 @@ export default function WhatsAppPage({
       <div style={{ padding: '0.875rem 1.125rem', background: '#fffbeb', border: '1px solid #fde68a', borderRadius: 'var(--radius-md)', display: 'flex', alignItems: 'center', gap: '0.625rem', fontSize: '0.8125rem', color: '#92400e' }}>
         <Info size={16} className="shrink-0" />
         <span>
-          <strong>Catatan SOT:</strong> Modul ini berjalan dalam mode simulasi. Pesan tidak terkirim otomatis via API berbayar.
-          Tombol "Kirim" akan membuka link <strong>wa.me</strong> langsung ke WhatsApp pengelola untuk diteruskan secara manual.
-          Semua aktivitas tercatat di log notifikasi sebagai bukti.
+          <strong>Catatan:</strong> Pengiriman pesan WhatsApp dilakukan secara manual oleh pengelola.
+          Klik tombol "Kirim via WhatsApp" untuk membuka WhatsApp dengan pesan yang sudah terisi otomatis.
         </span>
       </div>
 
@@ -202,8 +201,7 @@ export default function WhatsAppPage({
         <div style={{ padding: '0.875rem 1.125rem', background: '#eff6ff', border: '1px solid #bfdbfe', borderRadius: 'var(--radius-md)', display: 'flex', alignItems: 'center', gap: '0.625rem', fontSize: '0.8125rem', color: '#1e40af' }}>
           <Phone size={16} className="shrink-0" />
           <span>
-            <strong>Mode Uji Coba Aktif:</strong> Semua pesan akan dikirim ke nomor tes <strong>{TEST_PHONE}</strong> (bukan nomor penghuni sebenarnya).
-            Ubah <code style={{ background: 'rgba(255,255,255,0.5)', padding: '0.1rem 0.3rem', borderRadius: '3px' }}>TEST_PHONE</code> ke <code style={{ background: 'rgba(255,255,255,0.5)', padding: '0.1rem 0.3rem', borderRadius: '3px' }}>null</code> di <code style={{ background: 'rgba(255,255,255,0.5)', padding: '0.1rem 0.3rem', borderRadius: '3px' }}>WhatsAppPage.jsx</code> untuk kirim ke penghuni.
+            <strong>Mode Uji Coba:</strong> Pesan saat ini dikirim ke nomor <strong>{TEST_PHONE}</strong> untuk keperluan pengujian.
           </span>
         </div>
       )}

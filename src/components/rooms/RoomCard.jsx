@@ -73,23 +73,21 @@ export default function RoomCard({
           <div className="tenant-box-left">
             <User size={15} className={room.status === 'occupied' ? 'text-primary' : 'text-slate-400'} />
             {room.status === 'occupied' && tenant ? (
-              <span>
-                Penghuni: <span className="tenant-name-bold">{tenant.name}</span>
-              </span>
+              <span>Penghuni: <span className="tenant-name-bold">{tenant.name}</span></span>
             ) : room.status === 'maintenance' ? (
-              <span className="text-amber-600 font-semibold text-xs">Sedang Perawatan Fisik</span>
+              <span className="text-amber-600 font-semibold text-xs">Dalam Perawatan</span>
             ) : (
-              <span className="text-emerald-600 font-semibold text-xs">Kamar Siap Huni</span>
+              <span className="text-emerald-600 font-semibold text-xs">Tersedia</span>
             )}
           </div>
 
-          {/* Quick status change button */}
+        {/* Quick status change */}
           <select 
             value={room.status} 
             onChange={(e) => onChangeStatus(room.id, e.target.value)}
             className="text-xs py-1 px-2 border rounded font-semibold bg-white cursor-pointer"
             onClick={(e) => e.stopPropagation()}
-            title="Ubah Status Ketersediaan Cepat"
+            title="Ubah Status Kamar"
           >
             <option value="available">Tersedia</option>
             <option value="occupied">Terisi</option>
