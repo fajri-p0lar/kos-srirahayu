@@ -6,8 +6,6 @@ import {
   MessageSquare,
   Receipt,
   ShieldAlert,
-  CheckCircle2,
-  Presentation,
   Globe,
   Lock
 } from 'lucide-react';
@@ -48,18 +46,6 @@ export default function Sidebar({ activeModule, onSelectModule, onGoToPublic }) 
       id: 'users',
       title: 'Manajemen Pengguna',
       icon: ShieldAlert,
-      available: false,
-    },
-    {
-      id: 'testing',
-      title: 'Pengujian & UAT',
-      icon: CheckCircle2,
-      available: false,
-    },
-    {
-      id: 'presentation',
-      title: 'PPT Hasil Proyek',
-      icon: Presentation,
       available: false,
     },
   ];
