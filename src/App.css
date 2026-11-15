@@ -670,11 +670,7 @@
 .dot-available { background-color: var(--emerald-500); }
 .dot-maintenance { background-color: var(--amber-500); }
 
-.room-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
-  gap: 0.875rem;
-}
+/* room-grid is defined in RoomManagement.css */
 
 .room-card {
   background-color: var(--slate-50);
