@@ -126,6 +126,7 @@ export default function WhatsAppPage({
   const sentCount = notificationLog.length;
 
   return (
+    <div className="page-wrapper animate-fade-in">
     <div style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
       {/* Header Banner */}
       <div className="module-header-banner">
@@ -429,6 +430,7 @@ export default function WhatsAppPage({
           </div>
         </div>
       )}
+    </div>
     </div>
   );
 }

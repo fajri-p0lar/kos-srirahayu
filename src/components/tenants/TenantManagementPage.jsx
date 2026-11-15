@@ -199,6 +199,7 @@ export default function TenantManagementPage({
 
   /* ============ Render ============ */
   return (
+    <div className="page-wrapper animate-fade-in">
     <div className="tenant-module-container">
       {/* Header Banner */}
       <div className="module-header-banner">
@@ -544,6 +545,7 @@ export default function TenantManagementPage({
           {toast}
         </div>
       )}
+    </div>
     </div>
   );
 }

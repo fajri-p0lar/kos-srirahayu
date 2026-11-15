@@ -172,6 +172,7 @@ export default function RoomManagementPage({
   };
 
   return (
+    <div className="page-wrapper animate-fade-in">
     <div className="room-module-container">
       {/* Module Header */}
       <div className="module-header-banner">
@@ -803,6 +804,7 @@ export default function RoomManagementPage({
           <span>{toastMessage}</span>
         </div>
       )}
+    </div>
     </div>
   );
 }
