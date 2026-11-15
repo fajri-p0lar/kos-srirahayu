@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
-import { 
-  ShieldCheck, 
-  Lock, 
-  User, 
-  Phone, 
-  KeyRound, 
-  Eye, 
-  EyeOff, 
-  AlertCircle, 
+import {
+  ShieldCheck,
+  Lock,
+  User,
+  Phone,
+  KeyRound,
+  Eye,
+  EyeOff,
+  AlertCircle,
   CheckCircle2,
   Sparkles,
   Building2
@@ -100,7 +100,7 @@ export default function AdminSetupModal({ isOpen, onCompleteSetup }) {
                   id="setup-name"
                   type="text"
                   className="form-input"
-                  placeholder="Contoh: Ibu Srirahayu atau Nama Pengelola"
+                  placeholder="Contoh: Ibu Srirahayu"
                   value={fullName}
                   onChange={(e) => {
                     setFullName(e.target.value);

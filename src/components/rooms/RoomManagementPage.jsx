@@ -323,7 +323,7 @@ export default function RoomManagementPage({
 
       {/* TAB 1: DAFTAR KAMAR */}
       {activeTab === 'rooms' && (
-        <div className="flex flex-col gap-4">
+        <div className="room-tab-pane">
           {/* Filter Toolbar */}
           <div className="room-filter-toolbar">
             <div className="filter-left-controls">
@@ -558,8 +558,8 @@ export default function RoomManagementPage({
 
       {/* TAB 2: TIPE KAMAR & TARIF */}
       {activeTab === 'types' && (
-        <div className="flex flex-col gap-6">
-          <div className="flex justify-between items-center bg-white p-4 rounded-xl border border-slate-200">
+        <div className="room-tab-pane">
+          <div className="room-types-header">
             <div>
               <h3 className="font-bold text-slate-900 text-base">Katalog Tipe Kamar & Fasilitas Standar</h3>
               <p className="text-xs text-slate-500">
@@ -678,10 +678,10 @@ export default function RoomManagementPage({
 
       {/* TAB 3: GALERI FOTO KAMAR */}
       {activeTab === 'gallery' && (
-        <div className="flex flex-col gap-6">
-          <div className="bg-white p-5 rounded-2xl border border-slate-200">
+        <div className="room-tab-pane">
+          <div className="room-gallery-header">
             <div className="flex items-center gap-3">
-              <div className="w-10 h-10 rounded-xl bg-blue-50 text-blue-600 flex items-center justify-center font-bold">
+              <div className="w-10 h-10 rounded-xl bg-blue-50 text-blue-600 flex items-center justify-center font-bold shrink-0">
                 <ImageIcon size={20} />
               </div>
               <div>
@@ -693,11 +693,11 @@ export default function RoomManagementPage({
             </div>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+          <div className="room-gallery-grid">
             {galleryItems.map((item, index) => (
               <div
                 key={index}
-                className="group relative rounded-2xl overflow-hidden bg-slate-900 border border-slate-200 shadow-sm hover:shadow-xl transition-all cursor-pointer h-64"
+                className="gallery-item-card group"
                 onClick={() => {
                   setGalleryInitialIndex(index);
                   setIsGalleryModalOpen(true);
@@ -706,29 +706,29 @@ export default function RoomManagementPage({
                 <img
                   src={item.src}
                   alt={item.title}
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 opacity-90 group-hover:opacity-100"
+                  className="gallery-item-img"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent"></div>
+                <div className="gallery-item-overlay"></div>
 
-                <div className="absolute bottom-4 left-4 right-4 text-white">
-                  <div className="flex justify-between items-end">
+                <div className="gallery-item-info">
+                  <div className="flex justify-between items-end gap-2">
                     <div>
-                      <h4 className="font-extrabold text-base text-white group-hover:text-blue-300 transition-colors">
+                      <h4 className="gallery-item-title">
                         {item.title}
                       </h4>
-                      <p className="text-xs text-slate-300 mt-0.5 line-clamp-1">
+                      <p className="gallery-item-subtitle">
                         {item.subtitle}
                       </p>
                     </div>
                     {item.price && (
-                      <span className="font-extrabold text-xs bg-blue-600 px-2.5 py-1 rounded-lg text-white shrink-0">
+                      <span className="gallery-item-badge">
                         {formatRupiah(item.price)}
                       </span>
                     )}
                   </div>
                 </div>
 
-                <div className="absolute top-3 right-3 bg-slate-950/60 backdrop-blur-md p-1.5 rounded-lg text-white opacity-0 group-hover:opacity-100 transition-opacity">
+                <div className="gallery-item-hover-btn">
                   <Eye size={16} />
                 </div>
               </div>
